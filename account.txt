@@ -1,0 +1,12 @@
+0x522dCF3E6Af20643eEA2104aE6069Ce39ab7a204 eland1
+0x478529b2493fd8Eb448212d70be9fb183EA04170 eland2
+0x4Fbe7dB64b945a15cEF65052746E62Df45fC12c2 eland3
+0x1628c630dd8d30747B1Ee5d33bB3846D9206339f eland4
+0x6e0bDbeA0e4443178EcA5acd124c72a46737a581 eland5
+
+geth account new --datadir data - создание нового аккаунта
+geth init --datadir data genesis.json - создание генезис блока
+
+geth --datadir data --networkid 12345 --unlock 0x522dCF3E6Af20643eEA2104aE6069Ce39ab7a204 --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0x522dCF3E6Af20643eEA2104aE6069Ce39ab7a204 - запуск чатсной сети блокчейна
+geth attach --datadir data ipc:\\.\pipe\geth.ipc - создание отдельной консоли geth для того, чтобы управлять процессами в блокчейне
+    eth.blockNumber - номер блока
